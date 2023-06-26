@@ -1,0 +1,99 @@
+**********************************************************************************************
+CARATCTERES ESPECIAL
+--------------------
+\ une dos nombres con espacio en uno solo ( ls luis espinar daria error.   ls -a luis\ espinar ya tomaria como un solo directrio "luis espinar")
+
+\ tambien separa un comando en distintas lienas para verlo mas claro
+
+; concatena comandos. ls ; clear ejecuta ls y despues clear
+
+*  filtra una letra en el listado ( ls M* listaria los nombres de los directorios que empiezan por M )
+
+? lista por cada ? un caracter. ( ls ??? listqaria ficheros con 3 letras) 
+
+[] agrupa argumentos   ls [mn]* listaria directorios que empiezan por m y por n
+
+[ - ] el guion dentro de los corchetes aplica un rango a los dos caracteres de agrupacion 
+
+; separa un comando de otro comando, ejecuta el 1º y luego el 2º
+
+& separa dos comandos, ejecuta el 1º y el 2º
+
+&& separa dos comandos, pero solo ejecuta el 2º si el primero se ejecuta correctamente
+
+|| separa dos comandos y solo ejecuta el segundo si el primer comando falla
+
+ .
+
+$ variables
+
+! sirve acceder a historial colocando el numero junto al ! para ejecutar el numero historico de los comandos
+
+**********************************************************************************************
+ATAJOS
+-------
+Ctrl + A → Ir al principio de la línea en la que se está escribiendo.
+
+Ctrl + E → Ir al final de la línea en la que se está escribiendo.
+
+Ctrl + L → Borra la pantalla, similar al comando clear
+
+Ctrl + U → Borra la línea anterior a la posición del cursor. Si está al final de la línea, borra toda la línea.
+
+Ctrl + H → Borra el carácter anterior a la posición del cursos. Igual que retroceso.
+
+Ctrl + R → Permite buscar entre los comandos utilizados anteriormente.
+
+Ctrl + C → Interrumpe la ejecución de un programa.
+
+Ctrl + D → Cierra la shell actual.
+
+Ctrl + W → Corta la palabra anterior a la posición cursor.
+
+Ctrl + K → Corta la línea siguiente a la posición del cursor.
+
+Ctrl + T → Intercambia los dos últimos caracteres anteriores a la posición del cursor.
+
+Esc + T → Intercambia las dos últimas palabras anteriores a la posición del cursor.
+
+Alt + . o !$ → Referencia el último argumento del comando anterior.
+
+Alt + F → Avanza el cursor una palabra en la línea actual.
+
+Alt + B → Retrocede el cursor una palabra en la línea actual.
+
+Alt + l/u → Convierte la palabra en mayúsculas o minúsculas.
+
+Tab → Autocompleta nombres de archivos y carpetas.
+
+
+***************************************************************************************************
+
+
+ls listado del directorio   -l (listado) -t (ordenado por tiempo) -s (por tamaño) 
+
+cd cambia directorio. cd /home/luis cambia a luis, estemos donde estemos.  cd luis cambia a luis si ya estamos en home
+
+dir listado de directorio
+
+mkdir crea un directorio
+
+rmdir elimina un directorio
+
+pwd muestra la ruta actual en donde estamos
+
+whoami nos muestra que usuario somos
+
+hostname nos muestra el nombre del servidor en el que estamos
+
+alias crea un comando propio   alias clis(nombre que queremos)='comando o comandos ; que queremos implementar en el alias'
+
+unalias borra el alias que hemos creado
+
+chmod - para desiganr los permisos de un archivo o carpeta  chmod 777 pepe.conf
+
+chown - para cambiar de propietario un archivo chown (propietario):(grupo) (archivo)
+
+chgrp - para cambiar de grupo un archivo  chgrp estudiantes tarea1.txt
+
+
