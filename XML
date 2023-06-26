@@ -1,0 +1,38 @@
+<? xml version='1.0' encoding='UTF-8' standalone='yes' ?>    <!-- esta es la cabecera de los documentos XML -->
+
+<etiqueta> <!-- apertura de una etiqueta -->
+</etiqueta> <!-- cierre de una etiqueta -->
+
+<etiquetaVacia/>
+
+<etiqueta atributo="elAtributo" > </etiqueta> <!-- declaracion de atributo en una etiqueta -->
+
+<!DOCTYPE nombredelelemtoraiz [
+
+<!nombredelelementoraiz (etiquetas1, etiqueta2)>
+<!ELEMENT etiqueta1 (#PCDATA)>
+<!ELEMENT etiqueta2 (#PCDATA)>
+<!ATTLIST etqueta1 nombre CDATA #REQUIRED>  <!-- esto es la declaracion de un atributo noombre en la etiqueta etiqueta1 -->
+
+<!-- puede ser CDATA   = para texto normal
+     puede ser NMTOKEN = para texto sin caracteres especiales
+	 puede ser ID      = para valor irrepetible pero no puede empezar por numero
+	 
+	 
+	 #REQUIRED el atributo tiene que aparecer
+	 #IMPLIED  el atributo puede no aparecer 
+	 
+	 #PCDATA cualquier texto
+	 EMPTY  etiqueta vacia -->
+
+]>
+
+Los modificadores de elementos ELEMENT pueden ser :
+
+sin modificador = la etiqueta tiene que aparecer
+
++ = la etiqueta debe aparecer almenos una o mas veces
+* = la etiqueta puede aparecer o ninguna o una vez
+? = la etiqueta es opcional
+
+( etiqueta1 | etiqueta2) = aparece la 1 o la 2
