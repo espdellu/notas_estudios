@@ -1,0 +1,70 @@
+COMANDOS GIT:
+
+git init     -inicializa el repositorio en la carpeta, es lo primero que hay que hacer para empezar a trabajar en el repositorio
+
+git add "nombrefichero" -incluye al repositorio el fichero, mete el fichero en el area de staging.
+
+git status - presenta el estado del repositorio
+
+-
+
+git commit -m "mensajedemiprimercommit"  realiza el commit añadiendo el "mensajedemiprimercommit" , hace la revision
+
+git config --global user.name "nombreusuario" -valida el usuario que realiza el commit
+
+git config --global user.email "emailusuario" -valida el correo del usuario que realiza el commit
+
+git diff para ver los archivos que se han modificado, compara la caja ed working con commit 
+
+         --staged    - compara working con staging 
+
+git difftool -lanza la herramienta para mostrar las diferencias entre el fichero del working y el staging
+
+git rm "nombredefichero" - borra el fichero
+
+git mv "nombreficherooriginal" "nombreficheroresultante" - cambia el nomnbnre de un fichero y lo mueve al area de staging
+
+git log --oneline -para ver esl estado del commit muestra las revisiones
+
+		--pretty=format:"%h %an %ar - %s"    -   %h hora %an autor %ar tiempo ultima revision 
+		
+git show 	numeroderevision - muestra las modirficaciones que se crearon	
+
+git remote add origin https://github.com/sharkdp/bat    - seconecta a un repositorio remoto
+
+git fetch origin  - se conecta con el repositorio
+
+git pull origin master  -  se descarga desde origin el repo
+
+git push 				- sube la modificacion commit 
+
+git clone https://gitlab.com/juancarlos.rubio/nuevo.git/  	- copia un repositorio 
+
+
+
+
+CONCEPTOS:
+
+- cuando creas un fechero nuevo este, esta a la izquierda del todo (area working), y si se borra no hay nada que recuperar. Si se mueve al staging o commit ya se puede recuperar
+
+- echo "#primera linea de un fichero readme.md" > readme.md
+
+- less "nombrefichero" -muestra el contenido del fichero
+
+- Git trabaja con 3 areas: WORKING STAGING REPOSITORY
+
+- El fichero que este en WORKING no tiene copia y no se puede recuperer en caso de borrado, en los otros dos stage si tiene copia
+
+- Hay que enlazar la carpeta con la que queramos trebajar los repositorios. Boton derecho y eleccion del GIT
+
+- si despues del git status aparece un nombre en rojo es porque esta en el area WORKING
+
+- echo ·texto a agregar" > ficheri.tmp -agrega el texto al fichero y lo crea si no existe
+
+- nano .gitignore -crea un fichero y dentro ponemos :  *.tmp  es una mascara para filtrar acciones, por ejemplo en este caso igonar estos archivos tmp
+
+- tkdiff programa visual para mostrar las diferencias entre los ficheros
+
+- rm -rf "nombredirectorio"	- borra  sin preguntar carpeta y contenido
+
+- cp archivo y destino -comando para copiar   
