@@ -1,0 +1,35 @@
+CREATE DATABASE NOMBREDELABASEDEDATOS    -  CREA UNA BASE DE DATOS
+
+USE NOMBRE SE - SE CONECTA A LA BASE DE DATOS
+
+CREATE TABLE NOMBRE.NOMBRETABLA
+
+drop table --borra una tabla
+
+drop schema --borra una base de datos completa
+
+CREATE TABLE Clientes
+(IDcliente INT AUTO_INCREMENT,
+Nombre CHAR NOT NULL,
+PrimerApellido CHAR NOT NULL,
+SegundoApellido CHAR NOT NULL,
+DNI CHAR NOT NULL UNIQUE,
+Telefono INT,
+PRIMARY KEY(IDcliente));
+#O
+FOREIGN KEY (nombre columna) REFERENCES nombretabla (no0mbre columna),
+
+
+insert into Clientes values    inserta en una tabla los siguientes datos
+(null, 3454,2323,234);   estos datos tienen que coicidir con las restricciones y tipo de datos de los campos que declaramos en la tabla
+
+SELECT nombre de las columnas FROM nombre de la tabla     -- genera una vista de las columnas seleccionadas
+
+ALTER TABLE nombre tabla (add|drop|modify) column nombre columna int(30) (first|after) nombre columna  -- para modificar una tabla, en este caso añadimos una columna
+
+CHANGE COLUMN nombre_columna_vieja  nombre_columna_nueva    VARCHAR(30) -- para cambiar el nombre de una columna
+
+ADD (PRIMARY KEY|UNIQUE|FOREIGN KEY) nombre de la columna -- para añadir restricciones
+
+
+
