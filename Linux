@@ -23,11 +23,32 @@ CARATCTERES ESPECIAL
 
 || separa dos comandos y solo ejecuta el segundo si el primer comando falla
 
- .
+ .md     todos los archivos md
+ 
+ > añade el contenido de una funcion (izquierda) al fichero especificado (derecha del >). Si el fichero existe lo sobreescribe
+ 
+ >> " " ". Si el fichero existe. añade el contenido. 
+ 
+ &>       Crea un fichero nuevo con el contenido de la salida estándar y la salida de errores. Si el archivo existe se sobrescribirá.
 
 $ variables
 
 ! sirve acceder a historial colocando el numero junto al ! para ejecutar el numero historico de los comandos
+
+Para crear un directorio oculto, debe empezar su nombre por un punto . y se puede ver con el parametro -a
+
+Ambito remoto: Las herramientas de copia de ficheros en remoto mas utilizadas son scp y rsync. En este curso solo veremos scp, que se basa en el comando cp a través de ssh. La sintaxis es la siguiente:
+
+	scp 
+	[opciones] 
+	origen 
+	destino
+	Tanto el origen como el destino puede ser una dirección remota. Para acceder a la ubicación remota, el formato es usuario@host:ruta. Las opciones mas utilizadas del comando son las siguientes:
+
+	-i identity_file: Utiliza una llave privada de certificado concreta para realizar la comunicación con el host remoto.
+	-P puerto: Especifica el puerto de conexión con el host remoto.
+	-p: Preserva los tiempos de modificación, de acceso y permisos de los ficheros que se copian.
+	-r: Copia de forma recursiva (obligatorio para copiar directorios)
 
 **********************************************************************************************
 ATAJOS
@@ -68,9 +89,10 @@ Tab → Autocompleta nombres de archivos y carpetas.
 
 
 ***************************************************************************************************
+COMANDOS.
+---------
 
-
-ls listado del directorio   -l (listado) -t (ordenado por tiempo) -s (por tamaño) 
+ls listado del directorio   -l (listado) -t (ordenado por tiempo) -s (por tamaño)  -h (formato de tamaño en lectura "humana"   -a (ocultos)
 
 cd cambia directorio. cd /home/luis cambia a luis, estemos donde estemos.  cd luis cambia a luis si ya estamos en home
 
@@ -79,6 +101,24 @@ dir listado de directorio
 mkdir crea un directorio
 
 rmdir elimina un directorio
+
+mv mueve un fichero
+
+cp copia un fichero
+
+	-i:  Modo interactivo, pregunta antes de sobrescribir un archivo.
+
+	-p:  Copia también los atributos del archivo original.
+
+	-r:  Copia recursivamente el contenido del directorio de origen.
+	
+rm - Borra un archivo especificado	
+
+	-p:  Borra un árbol completo de directorios vacíos.
+
+	-r.  Borra directorios con contenido.	
+
+	-f:  Fuerza la eliminación del directorio especificado.
 
 pwd muestra la ruta actual en donde estamos
 
@@ -95,5 +135,36 @@ chmod - para desiganr los permisos de un archivo o carpeta  chmod 777 pepe.conf
 chown - para cambiar de propietario un archivo chown (propietario):(grupo) (archivo)
 
 chgrp - para cambiar de grupo un archivo  chgrp estudiantes tarea1.txt
+
+cat nombreficher	-	muestra el contenido de un fichero
+
+echo ·texto a agregar" > ficheri.tmp -agrega el texto al fichero y lo crea si no existe
+
+	echo $PATH    muestar el directorio de los ejecuitables del sistema
+
+nano .gitignore -crea un fichero y dentro ponemos :  *.tmp  es una mascara para filtrar acciones, por ejemplo en este caso igonar estos archivos tmp
+
+man - comando para la ayuda de los comandos. Se pone man seguido del comando del cual queramos ver la ayuda
+
+touch -   edita la fecha de un fichero o crear un fichero vacio
+
+find - busqueda de un fichero 
+
+perm -  busqueda por permisos
+
+head - muestra las 10 primeras lineas de un fichero.
+
+tail - como head pero por el final.
+
+nl - enumera las lineas que contiene un fichero.
+
+./nombrefichero - ejecuta un script
+
+
+
+
+
+
+
 
 
